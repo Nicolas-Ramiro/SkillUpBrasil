@@ -6,6 +6,9 @@ import QuemSomos from "./pages/QuemSomosPage";
 import FaqPage from "./pages/FaqPage";
 import PropostaPage from "./pages/proposta";
 import ContatoPage from "./pages/ContatoPage";
+import RecursosPage from "./pages/ResursosPage";
+import CursosPage from "./pages/CursosPage";
+import MentoriasPage from "./pages/mentoria/MentoriaPage";
 
 export default function App() {
   return (
@@ -19,6 +22,9 @@ export default function App() {
             <Route path="/faq" element={<FaqPage />} />
             <Route path="/proposta" element={<PropostaPage />} />
             <Route path="/contato" element={<ContatoPage />} />
+            <Route path="/recursos" element={<RecursosPage />} />
+            <Route path="/cursos" element={<CursosPage />} />
+            <Route path="/mentorias" element={<MentoriasPage />} />
           </Routes>
         </main>
         <Footer />
