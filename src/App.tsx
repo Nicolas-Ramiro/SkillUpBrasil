@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage";
 import QuemSomos from "./pages/QuemSomosPage";
 import FaqPage from "./pages/FaqPage";
 import PropostaPage from "./pages/proposta";
+import ContatoPage from "./pages/ContatoPage";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
             <Route path="/quem-somos" element={<QuemSomos />} />
             <Route path="/faq" element={<FaqPage />} />
             <Route path="/proposta" element={<PropostaPage />} />
+            <Route path="/contato" element={<ContatoPage />} />
           </Routes>
         </main>
         <Footer />
