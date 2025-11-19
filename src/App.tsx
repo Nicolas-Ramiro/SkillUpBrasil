@@ -12,6 +12,7 @@ import MentoriasPage from "./pages/mentoria/MentoriaPage";
 import { LoginPage } from "./pages/LoginPage";
 import { DashboardPage } from "./pages/dashboard/DashboardPage";
 import UsuarioPage from "./pages/dashboard/usuario/UsuarioPage";
+import CursoPage from "./pages/dashboard/curso/CursoPage";
 
 import type { JSX } from "react";
 
@@ -49,6 +50,7 @@ export default function App() {
             {/* Rota Protegida */}
             <Route path="/dashboard" element={<ProtectedRoute><DashboardPage /></ProtectedRoute>}/>
             <Route path="/dashboard/usuario" element={<ProtectedRoute><UsuarioPage /></ProtectedRoute>}/>
+            <Route path="/dashboard/curso" element={<ProtectedRoute><CursoPage /></ProtectedRoute>}/>
           </Routes>
         </main>
         <Footer />
