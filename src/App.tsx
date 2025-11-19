@@ -9,12 +9,30 @@ import ContatoPage from "./pages/ContatoPage";
 import RecursosPage from "./pages/ResursosPage";
 import CursosPage from "./pages/CursosPage";
 import MentoriasPage from "./pages/mentoria/MentoriaPage";
+import { LoginPage } from "./pages/LoginPage";
+import { DashboardPage } from "./pages/dashboard/DashboardPage";
+
+import type { JSX } from "react";
+
+// Componente de proteção de rota
+function ProtectedRoute({ children }: { children: JSX.Element }) {
+  const email = localStorage.getItem("userEmail");
+
+  // Apenas email da empresa pode acessar dashboard
+  if (email !== "Adminskillup@gmail.com") {
+    return <Navigate to="/" replace />;
+  }
+
+  return children;
+}
+
 
 export default function App() {
   return (
     <Router>
       <div className="flex flex-col min-h-screen bg-black text-white">
         <Header />
+
         <main className="flex-1 pt-[140px] md:pt-20 pb-40 px-4">
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -25,6 +43,10 @@ export default function App() {
             <Route path="/recursos" element={<RecursosPage />} />
             <Route path="/cursos" element={<CursosPage />} />
             <Route path="/mentorias" element={<MentoriasPage />} />
+            <Route path="/login" element={<LoginPage />} />
+
+            {/* Rota Protegida */}
+            <Route path="/dashboard" element={<ProtectedRoute><DashboardPage /></ProtectedRoute>}/>
           </Routes>
         </main>
         <Footer />
