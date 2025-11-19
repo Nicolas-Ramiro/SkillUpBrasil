@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
+import QuemSomos from "./pages/QuemSomosPage";
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
         <main className="flex-1 pt-[140px] md:pt-20 pb-40 px-4">
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/quem-somos" element={<QuemSomos />} />
           </Routes>
         </main>
         <Footer />
