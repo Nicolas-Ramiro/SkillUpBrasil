@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import QuemSomos from "./pages/QuemSomosPage";
 import FaqPage from "./pages/FaqPage";
+import PropostaPage from "./pages/proposta";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/quem-somos" element={<QuemSomos />} />
             <Route path="/faq" element={<FaqPage />} />
+            <Route path="/proposta" element={<PropostaPage />} />
           </Routes>
         </main>
         <Footer />
