@@ -13,6 +13,7 @@ import { LoginPage } from "./pages/LoginPage";
 import { DashboardPage } from "./pages/dashboard/DashboardPage";
 import UsuarioPage from "./pages/dashboard/usuario/UsuarioPage";
 import CursoPage from "./pages/dashboard/curso/CursoPage";
+import MentoriaPage from "./pages/dashboard/mentoria/MentoriaPage";
 
 import type { JSX } from "react";
 
@@ -51,6 +52,7 @@ export default function App() {
             <Route path="/dashboard" element={<ProtectedRoute><DashboardPage /></ProtectedRoute>}/>
             <Route path="/dashboard/usuario" element={<ProtectedRoute><UsuarioPage /></ProtectedRoute>}/>
             <Route path="/dashboard/curso" element={<ProtectedRoute><CursoPage /></ProtectedRoute>}/>
+            <Route path="/dashboard/mentoria" element={<ProtectedRoute><MentoriaPage /></ProtectedRoute>}/>
           </Routes>
         </main>
         <Footer />
