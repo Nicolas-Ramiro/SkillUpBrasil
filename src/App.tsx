@@ -17,6 +17,7 @@ import MentoriaPage from "./pages/dashboard/mentoria/MentoriaPage";
 import RecomendacaoPage from "./pages/dashboard/recomendacao/RecomendacaoPage";
 import ProgressoPage from "./pages/dashboard/progresso/ProgressoPage";
 import OfertaHabilidadePage from "./pages/dashboard/oferta-habilidade/OfertaHabilidadePage";
+import TransacaoPage from "./pages/dashboard/transacao-moeda/TransacaoMoedaPage";
 
 import type { JSX } from "react";
 
@@ -59,6 +60,7 @@ export default function App() {
             <Route path="/dashboard/recomendacao" element={<ProtectedRoute><RecomendacaoPage /></ProtectedRoute>}/>
             <Route path="/dashboard/progresso" element={<ProtectedRoute><ProgressoPage /></ProtectedRoute>}/>
             <Route path="/dashboard/habilidade" element={<ProtectedRoute><OfertaHabilidadePage /></ProtectedRoute>}/>
+            <Route path="/dashboard/moeda" element={<ProtectedRoute><TransacaoPage /></ProtectedRoute>}/>
           </Routes>
         </main>
         <Footer />
